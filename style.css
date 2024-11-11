@@ -1,0 +1,15 @@
+:root {
+    --space: #1f2041ff;
+    --violet: #4b3f72ff;
+    --sunglow: #ffc857ff;
+    --cyan: #119da4ff;
+    --gray: #19647eff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--space);
+}
