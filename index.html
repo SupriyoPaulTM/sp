@@ -6,13 +6,24 @@
     <title>Portfolio of Supriyo Paul</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Agbalumo">
 </head>
 <body>
-    <header></header>
+    <header>
+      <div class="top-header">
+        <button class="menu-button" onclick="navToggle()">☰</button>
+        <div id="top-name" class="name">Supriyo Paul</div>
+      </div>
+      <nav id="nav" class="top-nav">
+        <ul>
+          <li><a href="#main">Main</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <footer></footer>
     <script src="script.js"></script>
-    <script>
-        var navState = document.getElementById("nav-button").style.display
-    </script>
 </body>
 </html>
