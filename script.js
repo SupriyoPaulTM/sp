@@ -1,7 +1,5 @@
 function navToggle() {
-    if (navState === none) {
-        navState = block;
-    }
-    else
-    navState = none;
+  const element = document.getElementById("nav");
+  const isHidden = window.getComputedStyle(element).display === "none";
+  element.style.display = isHidden ? "block" : "none";
 }
