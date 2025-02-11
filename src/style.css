@@ -25,6 +25,7 @@
 
 html {
   font-family: 'Amaranth';
+  scroll-behavior: smooth;
 }
 body {
   min-height: 100dvh;
@@ -34,6 +35,10 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+input, label, textarea, button {
+  display: block;
 }
 
 .header {
@@ -54,6 +59,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 99;
 }
 
 section {
@@ -121,6 +127,22 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.3;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0%);
+  }
 }
 
 .scrollbar {
@@ -189,4 +211,42 @@ footer {
 .socialicon {
   width: 24px;
   height: 24px;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+  color: var(--clr-txt);
+}
+
+#contact-form input {
+  margin-bottom: 10px;
+  border: 1px solid var(--clr-txt);
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Amaranth';
+  color: var(--clr-txt);
+  background-color: var(--clr-bg);
+}
+
+#contact-form textarea {
+  margin-bottom: 10px;
+  border: 1px solid var(--clr-txt);
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  resize: none;
+  width: 100%;
+  font-family: 'Amaranth';
+  color: var(--clr-txt);
+  background-color: var(--clr-bg);
+}
+
+#contact-form button {
+  padding: 5px 20px;
+  font-family: 'Amaranth';
+  color: var(--clr-bg);
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: 5px;
 }

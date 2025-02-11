@@ -94,6 +94,19 @@
 	<section id="contact">
 	  <div class="container">
 	    <div class="top-name">Contact Me</div>
+	      <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+	        <input type="hidden" name="access_key" value="b8cc7762-826a-4c40-9677-e9a780a79421">
+	        <label for="name">Your Name</label>
+	        <input type="text" name="name" required>
+	        <label for="email">Your Email</label>
+	        <input type="email" name="email" required>
+	        <label for="message">Message</label>
+	        <textarea name="message" required></textarea>
+	        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+	        <!-- Custom Confirmation / Success Page -->
+	        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+	        <button type="submit">Send</button>
+	     </form>
 	  </div>
 	</section>
 	<footer></footer>
